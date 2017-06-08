@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UNx-Z4-ZiS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Digital Shop-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="digitalShop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,93 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="162" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c9o-Qy-j0m">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.17168925430000001" green="0.60181298179999998" blue="0.90087642769999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="shopCell" rowHeight="162" id="hEs-AK-TVB" customClass="ShopCell" customModule="digitalShop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="162"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hEs-AK-TVB" id="kY0-nk-sNL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="161.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lN6-U6-aCB">
+                                                    <rect key="frame" x="16" y="16" width="71" height="26.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDY-cF-UKm">
+                                                    <rect key="frame" x="311" y="19" width="48" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic1" translatesAutoresizingMaskIntoConstraints="NO" id="cuS-p7-uiz">
+                                                    <rect key="frame" x="16" y="48.5" width="343" height="97"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lN6-U6-aCB" firstAttribute="leading" secondItem="kY0-nk-sNL" secondAttribute="leadingMargin" constant="8" id="1ne-96-iBb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="cuS-p7-uiz" secondAttribute="trailing" constant="8" id="75h-CO-5si"/>
+                                                <constraint firstItem="cuS-p7-uiz" firstAttribute="leading" secondItem="kY0-nk-sNL" secondAttribute="leadingMargin" constant="8" id="EhD-ah-bxd"/>
+                                                <constraint firstItem="nDY-cF-UKm" firstAttribute="centerY" secondItem="lN6-U6-aCB" secondAttribute="centerY" id="PXg-wX-Vhd"/>
+                                                <constraint firstItem="cuS-p7-uiz" firstAttribute="top" secondItem="nDY-cF-UKm" secondAttribute="bottom" constant="8" id="QOB-en-7fi"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="nDY-cF-UKm" secondAttribute="trailing" constant="8" id="Qps-Ej-Wlm"/>
+                                                <constraint firstItem="lN6-U6-aCB" firstAttribute="top" secondItem="kY0-nk-sNL" secondAttribute="topMargin" constant="8" id="qBr-mE-Bx5"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="cuS-p7-uiz" secondAttribute="bottom" constant="8" id="qnG-Gh-EFu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="priceLbl" destination="nDY-cF-UKm" id="a6w-Yr-3MO"/>
+                                            <outlet property="productImage" destination="cuS-p7-uiz" id="r7Y-FW-UXJ"/>
+                                            <outlet property="titleLbl" destination="lN6-U6-aCB" id="dTZ-an-C6U"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="c9o-Qy-j0m" secondAttribute="trailing" id="5co-vf-bu5"/>
+                            <constraint firstItem="c9o-Qy-j0m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AEC-0t-pOF"/>
+                            <constraint firstItem="c9o-Qy-j0m" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ThK-SO-HD0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="c9o-Qy-j0m" secondAttribute="bottom" id="bf4-5C-z2i"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Digital Shop" id="QqX-A1-fIS"/>
+                    <connections>
+                        <outlet property="tableView" destination="c9o-Qy-j0m" id="ppw-xi-SgD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="X0f-jD-UeV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UNx-Z4-ZiS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="JdE-Fi-Eds">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.98685997719999996" green="0.2954109311" blue="0.2442416251" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4uT-h4-QqZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kZX-nP-0G5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="792.95352323838085"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pic1" width="700" height="400"/>
+    </resources>
 </document>
