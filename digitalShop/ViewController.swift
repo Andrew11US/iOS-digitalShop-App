@@ -29,6 +29,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return self.products.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let product = products[indexPath.row]
+        self.performSegue(withIdentifier: "detailSegue", sender: product)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "shopCell") as? ShopCell {
@@ -43,7 +49,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         return ShopCell()
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailVC = segue.destination as? DetailVC {
+            if sender != nil {
+                if let product = sender as? Product {
+                    detailVC.product = product
+                }
+            }
+        }
+    }
 
 }
 
