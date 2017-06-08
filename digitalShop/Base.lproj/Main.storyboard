@@ -118,20 +118,23 @@
                                     <constraint firstAttribute="height" constant="128" id="Sxu-fi-ucs"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FJq-fn-cqr">
-                                <rect key="frame" x="56" y="278" width="263" height="70"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FJq-fn-cqr">
+                                <rect key="frame" x="16" y="278" width="343" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AGw-hF-aeb">
-                                        <rect key="frame" x="0.0" y="0.0" width="263" height="70"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wis-WH-bIO">
-                                        <rect key="frame" x="263" y="0.0" width="0.0" height="70"/>
-                                        <state key="normal" title="Button"/>
+                                        <rect key="frame" x="171.5" y="0.0" width="171.5" height="50"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Credit Card">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="g56-jD-cZI"/>
+                                    <constraint firstAttribute="height" constant="50" id="g56-jD-cZI"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -139,8 +142,8 @@
                         <constraints>
                             <constraint firstItem="gWZ-yA-Yqg" firstAttribute="top" secondItem="vgM-6e-VnF" secondAttribute="bottom" constant="20" id="4hc-6T-THd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fRS-cv-jCC" secondAttribute="trailing" constant="20" id="7ac-UX-JZH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="FJq-fn-cqr" secondAttribute="trailing" constant="40" id="Bvk-tM-kCc"/>
-                            <constraint firstItem="FJq-fn-cqr" firstAttribute="leading" secondItem="cfQ-W7-SU2" secondAttribute="leadingMargin" constant="40" id="Cjv-Ec-PWG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FJq-fn-cqr" secondAttribute="trailing" id="Bvk-tM-kCc"/>
+                            <constraint firstItem="FJq-fn-cqr" firstAttribute="leading" secondItem="cfQ-W7-SU2" secondAttribute="leadingMargin" id="Cjv-Ec-PWG"/>
                             <constraint firstItem="gWZ-yA-Yqg" firstAttribute="leading" secondItem="cfQ-W7-SU2" secondAttribute="leadingMargin" constant="20" id="GVc-la-ix5"/>
                             <constraint firstItem="fRS-cv-jCC" firstAttribute="top" secondItem="gWZ-yA-Yqg" secondAttribute="bottom" constant="20" id="MAO-kS-gfo"/>
                             <constraint firstItem="fRS-cv-jCC" firstAttribute="centerX" secondItem="cfQ-W7-SU2" secondAttribute="centerX" id="RgY-vM-TaQ"/>
@@ -151,6 +154,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="applePayView" destination="AGw-hF-aeb" id="uca-9g-1ZM"/>
                         <outlet property="priceLbl" destination="jk7-tj-okr" id="dOc-a2-AJy"/>
                         <outlet property="productImage" destination="fRS-cv-jCC" id="xRb-y3-U4t"/>
                         <outlet property="titileLbl" destination="gWZ-yA-Yqg" id="k0A-PN-dmv"/>

@@ -42,7 +42,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let product = products[indexPath.row]
             
             cell.titleLbl.text = product.name
-            cell.priceLbl.text = product.price
+            cell.priceLbl.text = "$\(product.price)"
             cell.productImage.image = product.image
             
             return cell

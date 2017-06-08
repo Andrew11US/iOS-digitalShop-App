@@ -15,6 +15,7 @@
 		90B11D611EE95B530035D73A /* ShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B11D601EE95B530035D73A /* ShopCell.swift */; };
 		90B11D631EE961320035D73A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B11D621EE961320035D73A /* Product.swift */; };
 		90B11D6A1EE96EB40035D73A /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B11D691EE96EB40035D73A /* DetailVC.swift */; };
+		90B11D6C1EE977C70035D73A /* ThankYouVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B11D6B1EE977C70035D73A /* ThankYouVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		90B11D601EE95B530035D73A /* ShopCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopCell.swift; sourceTree = "<group>"; };
 		90B11D621EE961320035D73A /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		90B11D691EE96EB40035D73A /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		90B11D6B1EE977C70035D73A /* ThankYouVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThankYouVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				90A06A811EE87DDF003125C9 /* ViewController.swift */,
 				90B11D691EE96EB40035D73A /* DetailVC.swift */,
+				90B11D6B1EE977C70035D73A /* ThankYouVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90B11D6A1EE96EB40035D73A /* DetailVC.swift in Sources */,
+				90B11D6C1EE977C70035D73A /* ThankYouVC.swift in Sources */,
 				90A06A821EE87DDF003125C9 /* ViewController.swift in Sources */,
 				90B11D631EE961320035D73A /* Product.swift in Sources */,
 				90B11D611EE95B530035D73A /* ShopCell.swift in Sources */,
