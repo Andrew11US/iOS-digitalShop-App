@@ -30,6 +30,7 @@
 		90B11D621EE961320035D73A /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		90B11D691EE96EB40035D73A /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		90B11D6B1EE977C70035D73A /* ThankYouVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThankYouVC.swift; sourceTree = "<group>"; };
+		90B11D701EE97F920035D73A /* digitalShop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = digitalShop.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +63,7 @@
 		90A06A7E1EE87DDF003125C9 /* digitalShop */ = {
 			isa = PBXGroup;
 			children = (
+				90B11D701EE97F920035D73A /* digitalShop.entitlements */,
 				90B11D641EE96DBA0035D73A /* UI */,
 				90A06A861EE87DDF003125C9 /* Assets.xcassets */,
 				90B11D681EE96E0C0035D73A /* Controllers */,
@@ -150,6 +152,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = PTRW36GG78;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplePay = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -317,6 +324,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = digitalShop/digitalShop.entitlements;
 				DEVELOPMENT_TEAM = PTRW36GG78;
 				INFOPLIST_FILE = digitalShop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -330,6 +338,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = digitalShop/digitalShop.entitlements;
 				DEVELOPMENT_TEAM = PTRW36GG78;
 				INFOPLIST_FILE = digitalShop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
