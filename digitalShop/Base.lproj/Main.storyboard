@@ -35,19 +35,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lN6-U6-aCB">
-                                                    <rect key="frame" x="16" y="16" width="71" height="26.5"/>
+                                                    <rect key="frame" x="16" y="8" width="71" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDY-cF-UKm">
-                                                    <rect key="frame" x="311" y="19" width="48" height="21.5"/>
+                                                    <rect key="frame" x="311" y="11" width="48" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic1" translatesAutoresizingMaskIntoConstraints="NO" id="cuS-p7-uiz">
-                                                    <rect key="frame" x="16" y="48.5" width="343" height="97"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burger" translatesAutoresizingMaskIntoConstraints="NO" id="cuS-p7-uiz">
+                                                    <rect key="frame" x="16" y="40.5" width="343" height="105"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -57,7 +57,7 @@
                                                 <constraint firstItem="nDY-cF-UKm" firstAttribute="centerY" secondItem="lN6-U6-aCB" secondAttribute="centerY" id="PXg-wX-Vhd"/>
                                                 <constraint firstItem="cuS-p7-uiz" firstAttribute="top" secondItem="nDY-cF-UKm" secondAttribute="bottom" constant="8" id="QOB-en-7fi"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="nDY-cF-UKm" secondAttribute="trailing" constant="8" id="Qps-Ej-Wlm"/>
-                                                <constraint firstItem="lN6-U6-aCB" firstAttribute="top" secondItem="kY0-nk-sNL" secondAttribute="topMargin" constant="8" id="qBr-mE-Bx5"/>
+                                                <constraint firstItem="lN6-U6-aCB" firstAttribute="top" secondItem="kY0-nk-sNL" secondAttribute="topMargin" id="qBr-mE-Bx5"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="cuS-p7-uiz" secondAttribute="bottom" constant="8" id="qnG-Gh-EFu"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -108,6 +108,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pic1" width="700" height="400"/>
+        <image name="burger" width="1100" height="535"/>
     </resources>
 </document>

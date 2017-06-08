@@ -14,10 +14,12 @@ class ShopCell: UITableViewCell {
     @IBOutlet weak var priceLbl: UILabel!
     @IBOutlet weak var productImage: UIImageView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func configureCell(product: Product) {
+        
+        titleLbl.text = product.name
+        priceLbl.text = product.price
+        productImage.image = product.image
+        
     }
-
-
+    
 }

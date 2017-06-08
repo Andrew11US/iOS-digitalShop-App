@@ -12,6 +12,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var tableView: UITableView!
     
+    var products: [Product] = Product.createProducts()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,14 +26,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.products.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "shopCell") as! ShopCell
-        
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "shopCell") as? ShopCell {
+            
+            let product = products[indexPath.row]
+            
+            cell.titleLbl.text = product.name
+            cell.priceLbl.text = product.price
+            cell.productImage.image = product.image
+            
+            return cell
+        }
+        return ShopCell()
     }
 
 
