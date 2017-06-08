@@ -11,6 +11,7 @@ import UIKit
 class ThankYouVC: UIViewController {
 
     @IBOutlet weak var thankYouLbl: UILabel!
+    @IBOutlet weak var materialView: UIView!
     @IBOutlet weak var conView: UIView!
     
     var email = ""
@@ -18,11 +19,11 @@ class ThankYouVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.thankYouLbl.text = "Your order has been completed and a receipt has been sent to \(self.email). Thank you for your purchase! ☺️"
+        self.thankYouLbl.text = "Your order has been completed and a receipt has been sent to \(self.email). Thank you for your purchase!"
         
-//        let confettiView = SAConfettiView(frame: self.conView.bounds)
-//        self.conView.addSubview(confettiView)
-//        confettiView.startConfetti()
+        let confettiView = SAConfettiView(frame: self.conView.bounds)
+        self.conView.addSubview(confettiView)
+        confettiView.startConfetti()
     }
     
     @IBAction func backTapped(_ sender: AnyObject) {

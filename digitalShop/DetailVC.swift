@@ -22,9 +22,11 @@ class DetailVC: UIViewController, PKPaymentAuthorizationViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.titileLbl.text = product.name
-        self.priceLbl.text = "$\(product.price)"
-        self.productImage.image = product.image
+        DispatchQueue.main.async {
+            self.titileLbl.text = self.product.name
+            self.priceLbl.text = "$\(self.product.price)"
+            self.productImage.image = self.product.image
+        }
         
         let button: PKPaymentButton
         
@@ -54,6 +56,10 @@ class DetailVC: UIViewController, PKPaymentAuthorizationViewControllerDelegate {
                 self.email = nil
             }
         }
+    }
+    
+    func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didSelect shippingMethod: PKShippingMethod, completion: @escaping (PKPaymentAuthorizationStatus, [PKPaymentSummaryItem]) -> Void) {
+        completion(.success, allTheSummaryItems(shippingMethod))
     }
     
     func allTheSummaryItems(_ shippingMethod:PKShippingMethod) -> [PKPaymentSummaryItem] {

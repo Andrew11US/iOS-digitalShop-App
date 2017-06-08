@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9019DB541EE9A9AB00D4E2FA /* CustomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9019DB531EE9A9AB00D4E2FA /* CustomImage.swift */; };
 		90A06A801EE87DDF003125C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A06A7F1EE87DDF003125C9 /* AppDelegate.swift */; };
 		90A06A821EE87DDF003125C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A06A811EE87DDF003125C9 /* ViewController.swift */; };
 		90A06A851EE87DDF003125C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90A06A831EE87DDF003125C9 /* Main.storyboard */; };
@@ -16,9 +17,13 @@
 		90B11D631EE961320035D73A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B11D621EE961320035D73A /* Product.swift */; };
 		90B11D6A1EE96EB40035D73A /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B11D691EE96EB40035D73A /* DetailVC.swift */; };
 		90B11D6C1EE977C70035D73A /* ThankYouVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B11D6B1EE977C70035D73A /* ThankYouVC.swift */; };
+		90B11D721EE9956D0035D73A /* SAConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B11D711EE9956D0035D73A /* SAConfettiView.swift */; };
+		90B11D741EE99A590035D73A /* Material Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B11D731EE99A590035D73A /* Material Design.swift */; };
+		90B11D781EE9A3700035D73A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B11D771EE9A3700035D73A /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9019DB531EE9A9AB00D4E2FA /* CustomImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImage.swift; sourceTree = "<group>"; };
 		90A06A7C1EE87DDF003125C9 /* digitalShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = digitalShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90A06A7F1EE87DDF003125C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90A06A811EE87DDF003125C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +36,9 @@
 		90B11D691EE96EB40035D73A /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		90B11D6B1EE977C70035D73A /* ThankYouVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThankYouVC.swift; sourceTree = "<group>"; };
 		90B11D701EE97F920035D73A /* digitalShop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = digitalShop.entitlements; sourceTree = "<group>"; };
+		90B11D711EE9956D0035D73A /* SAConfettiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAConfettiView.swift; sourceTree = "<group>"; };
+		90B11D731EE99A590035D73A /* Material Design.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Material Design.swift"; sourceTree = "<group>"; };
+		90B11D771EE9A3700035D73A /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,8 @@
 				90A06A831EE87DDF003125C9 /* Main.storyboard */,
 				90A06A881EE87DDF003125C9 /* LaunchScreen.storyboard */,
 				90B11D601EE95B530035D73A /* ShopCell.swift */,
+				90B11D771EE9A3700035D73A /* CustomButton.swift */,
+				9019DB531EE9A9AB00D4E2FA /* CustomImage.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -95,6 +105,8 @@
 		90B11D661EE96DC70035D73A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				90B11D731EE99A590035D73A /* Material Design.swift */,
+				90B11D711EE9956D0035D73A /* SAConfettiView.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -197,8 +209,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				90B11D6A1EE96EB40035D73A /* DetailVC.swift in Sources */,
+				90B11D741EE99A590035D73A /* Material Design.swift in Sources */,
+				90B11D781EE9A3700035D73A /* CustomButton.swift in Sources */,
 				90B11D6C1EE977C70035D73A /* ThankYouVC.swift in Sources */,
+				90B11D721EE9956D0035D73A /* SAConfettiView.swift in Sources */,
 				90A06A821EE87DDF003125C9 /* ViewController.swift in Sources */,
+				9019DB541EE9A9AB00D4E2FA /* CustomImage.swift in Sources */,
 				90B11D631EE961320035D73A /* Product.swift in Sources */,
 				90B11D611EE95B530035D73A /* ShopCell.swift in Sources */,
 				90A06A801EE87DDF003125C9 /* AppDelegate.swift in Sources */,
