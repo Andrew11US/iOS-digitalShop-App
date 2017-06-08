@@ -9,7 +9,7 @@
 import UIKit
 import PassKit
 
-class DetailVC: UIViewController {
+class DetailVC: UIViewController, PKPaymentAuthorizationViewControllerDelegate {
     
     @IBOutlet weak var titileLbl: UILabel!
     @IBOutlet weak var priceLbl: UILabel!
@@ -38,6 +38,22 @@ class DetailVC: UIViewController {
         button.addTarget(self, action: #selector(DetailVC.applePayTapped) , for: .touchUpInside)
         button.frame = CGRect(x: 0, y: 0, width: self.applePayView.frame.size.width, height: self.applePayView.frame.size.height)
         self.applePayView.addSubview(button)
+    }
+    
+    func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, completion: @escaping (PKPaymentAuthorizationStatus) -> Void) {
+        
+        self.email = payment.shippingContact?.emailAddress
+        completion(.success)
+        // Setting up ApplePAy with Payment Platform
+    }
+    
+    func paymentAuthorizationViewControllerDidFinish(_ controller: PKPaymentAuthorizationViewController) {
+        controller.dismiss(animated: true) { () -> Void in
+            if let email = self.email {
+                self.performSegue(withIdentifier: "thankYouSegue", sender: email)
+                self.email = nil
+            }
+        }
     }
     
     func allTheSummaryItems(_ shippingMethod:PKShippingMethod) -> [PKPaymentSummaryItem] {
@@ -74,7 +90,7 @@ class DetailVC: UIViewController {
         request.paymentSummaryItems = allTheSummaryItems(freeShipping)
         
         let applePayContoller = PKPaymentAuthorizationViewController(paymentRequest: request)
-//        applePayContoller.delegate = self
+        applePayContoller.delegate = self
         self.present(applePayContoller, animated: true, completion: nil)
     }
     
