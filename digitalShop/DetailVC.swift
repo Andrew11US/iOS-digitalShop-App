@@ -31,9 +31,11 @@ class DetailVC: UIViewController, PKPaymentAuthorizationViewControllerDelegate {
         let button: PKPaymentButton
         
         if PKPaymentAuthorizationViewController.canMakePayments() {
-            button = PKPaymentButton(type: .buy, style: .black)
+//            button = PKPaymentButton(type: .buy, style: .black)
+            button = PKPaymentButton(paymentButtonType: .buy, paymentButtonStyle: .black)
         } else {
-            button = PKPaymentButton(type: .setUp, style: .black)
+//            button = PKPaymentButton(type: .setUp, style: .black)
+            button = PKPaymentButton(paymentButtonType: .setUp, paymentButtonStyle: .black)
         }
         
         self.view.layoutIfNeeded()
@@ -69,7 +71,7 @@ class DetailVC: UIViewController, PKPaymentAuthorizationViewControllerDelegate {
         return [product, shipping, total]
     }
     
-    func applePayTapped() {
+    @objc func applePayTapped() {
         let request = PKPaymentRequest()
         request.supportedNetworks = [PKPaymentNetwork.amex, PKPaymentNetwork.visa, PKPaymentNetwork.masterCard, PKPaymentNetwork.discover, PKPaymentNetwork.chinaUnionPay]
         request.countryCode = "US"
@@ -96,8 +98,8 @@ class DetailVC: UIViewController, PKPaymentAuthorizationViewControllerDelegate {
         request.paymentSummaryItems = allTheSummaryItems(freeShipping)
         
         let applePayContoller = PKPaymentAuthorizationViewController(paymentRequest: request)
-        applePayContoller.delegate = self
-        self.present(applePayContoller, animated: true, completion: nil)
+        applePayContoller?.delegate = self
+        self.present(applePayContoller!, animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

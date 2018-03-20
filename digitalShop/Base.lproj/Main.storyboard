@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UNx-Z4-ZiS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UNx-Z4-ZiS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Digital Shop-->
         <scene sceneID="tne-QT-ifu">
@@ -35,19 +40,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lN6-U6-aCB">
-                                                    <rect key="frame" x="16" y="8" width="71" height="26.5"/>
+                                                    <rect key="frame" x="23" y="11" width="70" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDY-cF-UKm">
-                                                    <rect key="frame" x="311" y="11" width="48" height="21.5"/>
+                                                    <rect key="frame" x="304" y="14" width="48" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burger" translatesAutoresizingMaskIntoConstraints="NO" id="cuS-p7-uiz" customClass="CustomImage" customModule="digitalShop" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="40.5" width="343" height="113"/>
+                                                    <rect key="frame" x="23" y="43" width="329" height="108"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="5"/>
@@ -59,9 +64,11 @@
                                                 <constraint firstItem="lN6-U6-aCB" firstAttribute="leading" secondItem="kY0-nk-sNL" secondAttribute="leadingMargin" constant="8" id="1ne-96-iBb"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="cuS-p7-uiz" secondAttribute="trailing" constant="8" id="75h-CO-5si"/>
                                                 <constraint firstItem="cuS-p7-uiz" firstAttribute="leading" secondItem="kY0-nk-sNL" secondAttribute="leadingMargin" constant="8" id="EhD-ah-bxd"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lN6-U6-aCB" secondAttribute="trailingMargin" id="H6a-yO-NGi"/>
                                                 <constraint firstItem="nDY-cF-UKm" firstAttribute="centerY" secondItem="lN6-U6-aCB" secondAttribute="centerY" id="PXg-wX-Vhd"/>
                                                 <constraint firstItem="cuS-p7-uiz" firstAttribute="top" secondItem="nDY-cF-UKm" secondAttribute="bottom" constant="8" id="QOB-en-7fi"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="nDY-cF-UKm" secondAttribute="trailing" constant="8" id="Qps-Ej-Wlm"/>
+                                                <constraint firstItem="nDY-cF-UKm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kY0-nk-sNL" secondAttribute="leadingMargin" id="pCT-VP-T2y"/>
                                                 <constraint firstItem="lN6-U6-aCB" firstAttribute="top" secondItem="kY0-nk-sNL" secondAttribute="topMargin" id="qBr-mE-Bx5"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="cuS-p7-uiz" secondAttribute="bottom" id="qnG-Gh-EFu"/>
                                             </constraints>
@@ -106,7 +113,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWZ-yA-Yqg">
-                                <rect key="frame" x="36" y="84" width="41" height="26.5"/>
+                                <rect key="frame" x="36" y="84" width="40.5" height="26.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -160,6 +167,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gWZ-yA-Yqg" firstAttribute="top" secondItem="vgM-6e-VnF" secondAttribute="bottom" constant="20" id="4hc-6T-THd"/>
+                            <constraint firstItem="jk7-tj-okr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cfQ-W7-SU2" secondAttribute="leadingMargin" id="4m1-68-H8K"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fRS-cv-jCC" secondAttribute="trailing" id="7ac-UX-JZH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FJq-fn-cqr" secondAttribute="trailing" id="Bvk-tM-kCc"/>
                             <constraint firstItem="FJq-fn-cqr" firstAttribute="leading" secondItem="cfQ-W7-SU2" secondAttribute="leadingMargin" id="Cjv-Ec-PWG"/>
@@ -167,6 +175,7 @@
                             <constraint firstItem="fRS-cv-jCC" firstAttribute="top" secondItem="gWZ-yA-Yqg" secondAttribute="bottom" constant="8" id="MAO-kS-gfo"/>
                             <constraint firstItem="fRS-cv-jCC" firstAttribute="centerX" secondItem="cfQ-W7-SU2" secondAttribute="centerX" id="RgY-vM-TaQ"/>
                             <constraint firstItem="fRS-cv-jCC" firstAttribute="leading" secondItem="cfQ-W7-SU2" secondAttribute="leadingMargin" id="Rwo-L6-fcl"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gWZ-yA-Yqg" secondAttribute="trailingMargin" id="XM6-ta-FWg"/>
                             <constraint firstItem="jk7-tj-okr" firstAttribute="centerY" secondItem="gWZ-yA-Yqg" secondAttribute="centerY" id="aKo-0v-eXF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jk7-tj-okr" secondAttribute="trailing" constant="20" id="at7-HK-bXT"/>
                             <constraint firstItem="FJq-fn-cqr" firstAttribute="top" secondItem="fRS-cv-jCC" secondAttribute="bottom" constant="8" id="x3M-qM-Qf8"/>
@@ -197,7 +206,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLd-cr-OJY">
-                                <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zqB-D9-HA0">
@@ -273,7 +282,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UNx-Z4-ZiS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="JdE-Fi-Eds">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.98685997719999996" green="0.2954109311" blue="0.2442416251" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
